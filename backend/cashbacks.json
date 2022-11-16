@@ -1,0 +1,88 @@
+{
+  "cashbacks": [
+    {
+      "id": 1,
+      "name": "Cashback 1",
+      "description": "Cashback 1 description",
+      "price_in_cents": 10000,
+      "limit_date": "2022-12-19",
+      "company": {
+        "name": "PicPay",
+        "description": "The app facilitates access to financial solutions, such as loans and credit cards, allows you to pay for everything and everyone and even pay your bills in installments and, of course, makes your money go further!",
+        "logo": "https://www.company1.com/logo.png"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Cashback 2",
+      "description": "Cashback 2 description",
+      "price_in_cents": 5000,
+      "limit_date": "2022-11-30",
+      "company": {
+        "name": "Beblue",
+        "description": "Enjoy the best establishments city and get cash back to each purchase to use as you wish.",
+        "logo": "https://www.company2.com/logo.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Cashback 3",
+      "description": "Cashback 3 description",
+      "price_in_cents": 8000,
+      "limit_date": "2022-12-22",
+      "company": {
+        "name": "Mycashback",
+        "description": "When you buy through advertiser links on our website, you get a portion of the money you spend back.",
+        "logo": "https://www.company3.com/logo.png"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Cashback 4",
+      "description": "Cashback 4 description",
+      "price_in_cents": 1050,
+      "limit_date": "2023-01-14",
+      "company": {
+        "name": "Méliuz",
+        "description": "In addition to thousands of discount and credit card coupons, Méliuz also offers exclusive cashback to its customers.",
+        "logo": "https://www.company4.com/logo.png"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Cashback 5",
+      "description": "Cashback 5 description",
+      "price_in_cents": 4850,
+      "limit_date": "2022-11-30",
+      "company": {
+        "name": "myWorld",
+        "description": "A simple way to collect Cashback and Shopping Points while you're away from home.",
+        "logo": "https://www.company5.com/logo.png"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Cashback 6",
+      "description": "Cashback 6 description",
+      "price_in_cents": 8000,
+      "limit_date": "2022-12-22",
+      "company": {
+        "name": "Mycashback",
+        "description": "When you buy through advertiser links on our website, you get a portion of the money you spend back.",
+        "logo": "https://www.company3.com/logo.png"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Cashback 7",
+      "description": "Cashback 7 description",
+      "price_in_cents": 10000,
+      "limit_date": "2022-12-19",
+      "company": {
+        "name": "PicPay",
+        "description": "The app facilitates access to financial solutions, such as loans and credit cards, allows you to pay for everything and everyone and even pay your bills in installments and, of course, makes your money go further!",
+        "logo": "https://www.company1.com/logo.png"
+      }
+    }
+  ]
+}
