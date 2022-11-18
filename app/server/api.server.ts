@@ -1,14 +1,14 @@
-import axiosModule from 'axios'
-import { v4 as uuid } from 'uuid'
+import axiosModule from "axios"
+import { v4 as uuid } from "uuid"
 
-import type { SimpleCashback, DetailedCashback } from '~/types'
+import type { Cashback } from "~/types"
 
-const axios = axiosModule.create({ baseURL: 'http://localhost:3001' })
+const axios = axiosModule.create({ baseURL: "http://localhost:3001" })
 
-async function apiGetAllSimpleCashbacks(): Promise<SimpleCashback[]> {
-  const { data } = await axios.get('/cashbacks')
+async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
+  const { data } = await axios.get("/cashbacks")
 
-  const response = data.map((item: SimpleCashback) => {
+  const response = data.map((item: Cashback) => {
     const { name, price_in_cents, limit_date, company } = item
 
     return {
@@ -16,29 +16,27 @@ async function apiGetAllSimpleCashbacks(): Promise<SimpleCashback[]> {
       name,
       price_in_cents,
       limit_date,
-      company_name: company.name,
-      company_logo: company.logo,
+      company: company
     }
-  }) as SimpleCashback[]
+  }) as Cashback[]
 
   return response
 }
 
 async function apiGetAllDetailedCashbacks(id: string) {
-  const { data } = await axios.get(`/cashbacks${id}`)
+  const { data: DetailedCashbackData } = await axios.get(`/cashbacks/${id}`)
 
-  const response = data.map((item: DetailedCashback) => {
-    const { name, description, price_in_cents, limit_date, company } = item
+  const { name, description, price_in_cents, limit_date, company } =
+    DetailedCashbackData
 
-    return {
-      id: uuid(),
-      name,
-      description,
-      price_in_cents,
-      limit_date,
-      company: company,
-    }
-  }) as DetailedCashback
+  const response = {
+    id: uuid(),
+    name,
+    description,
+    price_in_cents,
+    limit_date,
+    company: company,
+  } as Cashback
 
   return response
 }

@@ -5,10 +5,10 @@ import type { LoaderFunction } from '@remix-run/node'
 import { json } from '@remix-run/node'
 import { apiGetAllDetailedCashbacks } from '~/server/api.server'
 
-import type { DetailedCashback } from '~/types'
+import type { Cashback } from '~/types'
 
 type LoaderData = {
-  detailedCashbackData: DetailedCashback
+  detailedCashbackData: Cashback
 }
 
 const loader: LoaderFunction = async ({ params }) => {
@@ -23,7 +23,7 @@ const loader: LoaderFunction = async ({ params }) => {
 }
 
 function CashbackId() {
-  const { detailedCashbackData } = useLoaderData<LoaderData>()
+  const { detailedCashbackData } = useLoaderData() as unknown as LoaderData
   return(
     <div>
       <h1>{detailedCashbackData.name}</h1>

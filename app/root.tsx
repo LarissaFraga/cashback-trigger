@@ -34,7 +34,7 @@ export default function App() {
           </div>
         </header>
 
-        <main className="my-4 ">
+        <main className="my-4 p-4">
           <Outlet />
         </main>
 

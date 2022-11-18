@@ -1,16 +1,5 @@
-type SimpleCashback = {
-  id: string,
-  name: string,
-  price_in_cents: number,
-  limit_date: Date,
-  company: {
-    name: string,
-    description: string,
-    logo: string
-  }
-}
 
-type DetailedCashback = {
+type Cashback = {
   id: string
   name: string
   description: string,
@@ -18,9 +7,8 @@ type DetailedCashback = {
   limit_date: Date,
   company: {
     name: string,
-    description: string,
-    logo: string
+    description: string
   }
 }
 
-export type { SimpleCashback, DetailedCashback }
+export type { Cashback }
