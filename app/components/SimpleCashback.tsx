@@ -17,7 +17,7 @@ function SimpleCashback({ image, title, price, date, id }: Props) {
   return (
     <>
       <Card>
-        <div style={{ width: 345, height: 200, display: "flex", justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ maxWidth: 345, height: 150 }}>
           <CardMedia
             component="img"
             height={210}

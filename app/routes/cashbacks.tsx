@@ -6,11 +6,9 @@ import { useLoaderData } from "@remix-run/react"
 import { apiGetAllSimpleCashbacks } from "~/server/api.server"
 import type { Cashback } from "~/types"
 
-import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback/SimpleCashback"
+import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback"
 
 import { formatDate, formatPrice, handleLogoCompany } from "~/helpers"
-
-// import Button from '@mui/material/Button'
 
 /**
  * Backend: "get"
