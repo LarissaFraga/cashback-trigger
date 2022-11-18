@@ -1,5 +1,4 @@
 import axiosModule from "axios"
-import { v4 as uuid } from "uuid"
 
 import type { Cashback } from "~/types"
 
@@ -9,10 +8,10 @@ async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
   const { data } = await axios.get("/cashbacks")
 
   const response = data.map((item: Cashback) => {
-    const { name, price_in_cents, limit_date, company } = item
+    const { id, name, price_in_cents, limit_date, company } = item
 
     return {
-      id: uuid(),
+      id: id,
       name,
       price_in_cents,
       limit_date,
@@ -23,14 +22,14 @@ async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
   return response
 }
 
-async function apiGetAllDetailedCashbacks(id: string) {
+async function apiGetAllDetailedCashbacks(id: number) {
   const { data: DetailedCashbackData } = await axios.get(`/cashbacks/${id}`)
 
   const { name, description, price_in_cents, limit_date, company } =
     DetailedCashbackData
 
   const response = {
-    id: uuid(),
+    id: id,
     name,
     description,
     price_in_cents,

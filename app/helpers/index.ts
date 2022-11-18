@@ -1,6 +1,6 @@
 import PicPayLogo from "../../public/logos/picpay.png"
 import BeblueLogo from "../../public/logos/beblue.jpg"
-import MyCashback from "../../public/logos/mycashback.jpg"
+import MyCashback from "../../public/logos/mycashback.png"
 import Meliuz from "../../public/logos/meliuz.png"
 import MyWorld from "../../public/logos/myworld.png"
 

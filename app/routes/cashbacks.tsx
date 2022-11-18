@@ -6,7 +6,7 @@ import { useLoaderData } from "@remix-run/react"
 import { apiGetAllSimpleCashbacks } from "~/server/api.server"
 import type { Cashback } from "~/types"
 
-import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback"
+import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback/SimpleCashback"
 
 import { formatDate, formatPrice, handleLogoCompany } from "~/helpers"
 
@@ -23,7 +23,6 @@ const loader: LoaderFunction = async () => {
 
 function Cashbacks() {
   const { cashbacks } = useLoaderData()
-  console.log(cashbacks)
 
   return (
     <div className="flex flex-row flex-wrap items-center justify-center">
@@ -34,6 +33,7 @@ function Cashbacks() {
             title={cashback.company.name}
             price={formatPrice(cashback.price_in_cents)}
             date={formatDate(cashback.limit_date)}
+            id={cashback.id}
           />
         </div>
       ))}

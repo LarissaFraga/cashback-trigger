@@ -1,6 +1,6 @@
 
 type Cashback = {
-  id: string
+  id: number
   name: string
   description: string,
   price_in_cents: number,
