@@ -18,12 +18,12 @@ const loader: LoaderFunction = async ({ params }) => {
     throw new Error('No id provided')
   }
 
-  const detailedCashbackData = await apiGetAllDetailedCashbacks(id)
+  const detailedCashbackData = await apiGetAllDetailedCashbacks(+id)
   return json<LoaderData>({ detailedCashbackData })
 }
 
 function CashbackId() {
-  const { detailedCashbackData } = useLoaderData() as unknown as LoaderData
+  const { detailedCashbackData } = useLoaderData() as LoaderData
   return(
     <div>
       <h1>{detailedCashbackData.name}</h1>

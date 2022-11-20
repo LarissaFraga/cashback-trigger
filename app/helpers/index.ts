@@ -28,7 +28,7 @@ function formatPrice(price: number) {
   }).format(price / 100)
 }
 
-function formatDate(date: Date) {
+function formatDate(date: string) {
   return new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
