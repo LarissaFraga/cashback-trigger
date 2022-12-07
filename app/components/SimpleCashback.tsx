@@ -4,6 +4,7 @@ import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
+import { useNavigate } from "@remix-run/react"
 
 interface Props {
   image: any
@@ -14,6 +15,13 @@ interface Props {
 }
 
 function SimpleCashback({ image, title, price, date, id }: Props) {
+  
+  const navigate = useNavigate()
+
+  function navigateToCashback() {
+    navigate(`/cashbacks/${id}`)
+  }
+
   return (
     <>
       <Card>
@@ -37,7 +45,7 @@ function SimpleCashback({ image, title, price, date, id }: Props) {
           </p>
         </CardContent>
         <CardActions>
-          <Button size="small" href={`/cashbacks/${id}`}>
+          <Button size="small" onClick={() => navigateToCashback()}>
             See More Details
           </Button>
         </CardActions>
