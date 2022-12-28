@@ -16,7 +16,8 @@
     "forceConsistentCasingInFileNames": false,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "include": ["./app/index.d.ts"],
     },
     "skipLibCheck": true,
 
