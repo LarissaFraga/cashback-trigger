@@ -1,8 +1,8 @@
-import PicPayLogo from "../../public/logos/picpay.png"
-import BeblueLogo from "../../public/logos/beblue.jpg"
-import MyCashback from "../../public/logos/mycashback.png"
-import Meliuz from "../../public/logos/meliuz.png"
-import MyWorld from "../../public/logos/myworld.png"
+import PicPayLogo from "~/assets/logos/picpay.png"
+import BeblueLogo from "~/assets/logos/beblue.jpg"
+import MyCashback from "~/assets/logos/mycashback.png"
+import Meliuz from "~/assets/logos/meliuz.png"
+import MyWorld from "~/assets/logos/myworld.png"
 
 function handleLogoCompany(company: string) {
   switch (company) {
