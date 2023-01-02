@@ -2,10 +2,10 @@ import axiosModule from "axios"
 
 import type { Cashback } from "~/types"
 
-const axios = axiosModule.create({ baseURL: "http://localhost:3001" })
+const axios = axiosModule.create({ baseURL: "https://demo3904716.mockable.io/" })
 
 async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
-  const { data } = await axios.get("/cashbacks")
+  const { data } = await axios.get("/cash")
 
   const response = data.map((item: Cashback) => {
     const { id, name, price_in_cents, limit_date, company } = item
