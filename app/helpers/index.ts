@@ -2,7 +2,7 @@ import PicPayLogo from "~/assets/logos/picpay.png"
 import BeblueLogo from "~/assets/logos/beblue.jpg"
 import MyCashback from "~/assets/logos/mycashback.png"
 import Meliuz from "~/assets/logos/meliuz.png"
-import MyWorld from "~/assets/logos/myworld.png"
+import MyWorld from "~/assets/logos/myWorld.png"
 
 function handleLogoCompany(company: string) {
   switch (company) {
