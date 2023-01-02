@@ -2,7 +2,7 @@ import axiosModule from "axios"
 
 import type { Cashback } from "~/types"
 
-const axios = axiosModule.create({ baseURL: "http://localhost:3001" })
+const axios = axiosModule.create({ baseURL: "https://cashback-trigger.vercel.app/" })
 
 async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
   const { data } = await axios.get("/cashbacks")
