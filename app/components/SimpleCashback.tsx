@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { useNavigate } from "@remix-run/react"
+import { NoSsr } from "@mui/material"
 
 interface Props {
   image: any
@@ -15,7 +16,6 @@ interface Props {
 }
 
 function SimpleCashback({ image, title, price, date, id }: Props) {
-  
   const navigate = useNavigate()
 
   function navigateToCashback() {
@@ -40,9 +40,11 @@ function SimpleCashback({ image, title, price, date, id }: Props) {
           <p className="m-0 text-[1rem] font-[400] leading-normal tracking-[.00938em] text-secondary-text">
             Price: {price}
           </p>
-          <p className="m-0 text-[1rem] font-[400] leading-normal tracking-[.00938em] text-secondary-text">
-            Date: {date}
-          </p>
+          <NoSsr>
+            <p className="m-0 text-[1rem] font-[400] leading-normal tracking-[.00938em] text-secondary-text">
+              Date: {date}
+            </p>
+          </NoSsr>
         </CardContent>
         <CardActions>
           <Button size="small" onClick={() => navigateToCashback()}>

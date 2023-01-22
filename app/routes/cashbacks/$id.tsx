@@ -21,6 +21,7 @@ import type { TransitionProps } from "@mui/material/transitions"
 import type { ReactElement, Ref } from "react"
 import { forwardRef } from "react"
 import { formatDate, formatPrice, handleLogoCompany } from "~/helpers"
+import { NoSsr } from "@mui/material"
 
 type LoaderData = {
   detailedCashbackData: Cashback
@@ -85,28 +86,28 @@ function CashbackId() {
             <ListItemText primary={detailedCashbackData.company.description} />
           </ListItem>
           <Divider />
-          <ListItem style={{ padding: '4px 16px'}}>
+          <ListItem style={{ padding: "4px 16px" }}>
             <ListItemText>
               <strong>Name: </strong>
               {detailedCashbackData.name}
             </ListItemText>
           </ListItem>
-          <ListItem style={{ padding: '4px 16px'}}>
+          <ListItem style={{ padding: "4px 16px" }}>
             <ListItemText>
               <strong>Description: </strong>
               {detailedCashbackData.description}
             </ListItemText>
           </ListItem>
-          <ListItem style={{ padding: '4px 16px'}}>
+          <ListItem style={{ padding: "4px 16px" }}>
             <ListItemText>
               <strong>Price: </strong>
               {formatPrice(detailedCashbackData.price_in_cents)}
             </ListItemText>
           </ListItem>
-          <ListItem style={{ padding: '4px 16px'}}>
+          <ListItem style={{ padding: "4px 16px" }}>
             <ListItemText>
               <strong>Limit date: </strong>
-              {formatDate(detailedCashbackData.limit_date)}
+              <NoSsr>{formatDate(detailedCashbackData.limit_date)}</NoSsr>
             </ListItemText>
           </ListItem>
         </List>
