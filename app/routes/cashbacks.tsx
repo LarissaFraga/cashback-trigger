@@ -18,6 +18,8 @@ import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback"
 
 import { formatDate, formatPrice, handleLogoCompany } from "~/helpers"
 
+import { useHydrated } from 'remix-utils'
+
 /**
  * Backend: "get"
  */
@@ -29,6 +31,7 @@ const loader: LoaderFunction = async () => {
 
 function Cashbacks() {
   const { cashbacks } = useLoaderData()
+  const isJavaScriptEnabled = useHydrated()
 
   const [filter, setFilter] = useState("")
 
@@ -66,6 +69,8 @@ function Cashbacks() {
 
   return (
     <>
+      {isJavaScriptEnabled}
+
       <div className="ml-4 flex flex-row flex-wrap items-center justify-center gap-4">
         <FormControl sx={{ minWidth: 120 }}>
           <InputLabel id="filter-select">Order by</InputLabel>
