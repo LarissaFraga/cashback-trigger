@@ -59,7 +59,7 @@ function Cashbacks() {
       })
     } else {
       return cashbacks.sort((a: Cashback, b: Cashback) => {
-        return a.id - b.id
+        return +a.id - +b.id
       })
     }
   }
@@ -99,7 +99,7 @@ function Cashbacks() {
                 title={cashback.company.name}
                 price={formatPrice(cashback.price_in_cents)}
                 date={formatDate(cashback.limit_date)}
-                id={cashback.id}
+                id={+cashback.id}
               />
             </div>
           ))

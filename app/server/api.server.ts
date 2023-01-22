@@ -22,7 +22,7 @@ async function apiGetAllSimpleCashbacks(): Promise<Cashback[]> {
   return response
 }
 
-async function apiGetAllDetailedCashbacks(id: number) {
+async function apiGetAllDetailedCashbacks(id: string) {
   const { data: DetailedCashbackData } = await axios.get(`/cashbacks/${id}`)
 
   const { name, description, price_in_cents, limit_date, company } =

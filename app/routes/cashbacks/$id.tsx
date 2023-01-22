@@ -33,7 +33,7 @@ const loader: LoaderFunction = async ({ params }) => {
     throw new Error("No id provided")
   }
 
-  const detailedCashbackData = await apiGetAllDetailedCashbacks(+id)
+  const detailedCashbackData = await apiGetAllDetailedCashbacks(id)
   return json<LoaderData>({ detailedCashbackData })
 }
 

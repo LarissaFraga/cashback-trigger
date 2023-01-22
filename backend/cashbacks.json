@@ -1,7 +1,7 @@
 {
   "cashbacks": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Cashback 1",
       "description": "Cashback 1 description",
       "price_in_cents": 10000,
@@ -12,7 +12,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Cashback 2",
       "description": "Cashback 2 description",
       "price_in_cents": 5000,
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Cashback 3",
       "description": "Cashback 3 description",
       "price_in_cents": 8000,
@@ -34,7 +34,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cashback 4",
       "description": "Cashback 4 description",
       "price_in_cents": 1050,
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Cashback 5",
       "description": "Cashback 5 description",
       "price_in_cents": 4850,
@@ -56,7 +56,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Cashback 6",
       "description": "Cashback 6 description",
       "price_in_cents": 8000,
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Cashback 7",
       "description": "Cashback 7 description",
       "price_in_cents": 10000,
