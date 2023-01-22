@@ -18,7 +18,7 @@ import { SimpleCashback as CashbackCard } from "~/components/SimpleCashback"
 
 import { formatDate, formatPrice, handleLogoCompany } from "~/helpers"
 
-import { useHydrated } from 'remix-utils'
+import { useHydrated } from "remix-utils"
 
 /**
  * Backend: "get"
@@ -69,52 +69,83 @@ function Cashbacks() {
 
   return (
     <>
-      {isJavaScriptEnabled}
-
-      <div className="ml-4 flex flex-row flex-wrap items-center justify-center gap-4">
-        <FormControl sx={{ minWidth: 120 }}>
-          <InputLabel id="filter-select">Order by</InputLabel>
-          <Select
-            labelId="filter-select"
-            id="filter-select"
-            value={filter}
-            label="Order by"
-            onChange={priceHandleChange}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value="Date: Oldest to Newest">
-              Date: Oldest to Newest
-            </MenuItem>
-            <MenuItem value="Date: Newest to Oldest">
-              Date: Newest to Oldest
-            </MenuItem>
-            <MenuItem value="Price: Low to High">Price: Low to High</MenuItem>
-            <MenuItem value="Price: High to Low">Price: High to Low</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-      <div className="flex flex-row flex-wrap items-center justify-center">
-        {cashbacks
-          .map((cashback: Cashback) => (
-            <div key={cashback.id} className="my-4 mx-4 max-w-fit">
-              <CashbackCard
-                image={handleLogoCompany(cashback.company.name)}
-                title={cashback.company.name}
-                price={formatPrice(cashback.price_in_cents)}
-                date={formatDate(cashback.limit_date)}
-                id={+cashback.id}
-              />
-            </div>
-          ))
-          .sort(() => {
-            return filterCashbacks()
-          })}
-      </div>
-      <section className="flex-1">
-        <Outlet />
-      </section>
+      {isJavaScriptEnabled ? (
+        <div>
+          <div className="ml-4 flex flex-row flex-wrap items-center justify-center gap-4">
+            <FormControl sx={{ minWidth: 120 }}>
+              <InputLabel id="filter-select">Order by</InputLabel>
+              <Select
+                labelId="filter-select"
+                id="filter-select"
+                value={filter}
+                label="Order by"
+                onChange={priceHandleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value="Date: Oldest to Newest">
+                  Date: Oldest to Newest
+                </MenuItem>
+                <MenuItem value="Date: Newest to Oldest">
+                  Date: Newest to Oldest
+                </MenuItem>
+                <MenuItem value="Price: Low to High">
+                  Price: Low to High
+                </MenuItem>
+                <MenuItem value="Price: High to Low">
+                  Price: High to Low
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div className="flex flex-row flex-wrap items-center justify-center">
+            {cashbacks
+              .map((cashback: Cashback) => (
+                <div key={cashback.id} className="my-4 mx-4 max-w-fit">
+                  <CashbackCard
+                    image={handleLogoCompany(cashback.company.name)}
+                    title={cashback.company.name}
+                    price={formatPrice(cashback.price_in_cents)}
+                    date={formatDate(cashback.limit_date)}
+                    id={+cashback.id}
+                  />
+                </div>
+              ))
+              .sort(() => {
+                return filterCashbacks()
+              })}
+          </div>
+          <section className="flex-1">
+            <Outlet />
+          </section>
+        </div>
+      ) : (
+        <div className="ml-4 flex flex-row flex-wrap items-center justify-center gap-4">
+          <FormControl sx={{ minWidth: 120 }}>
+            <InputLabel id="filter-select">Order by</InputLabel>
+            <Select
+              labelId="filter-select"
+              id="filter-select"
+              value={filter}
+              label="Order by"
+              onChange={priceHandleChange}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value="Date: Oldest to Newest">
+                Date: Oldest to Newest
+              </MenuItem>
+              <MenuItem value="Date: Newest to Oldest">
+                Date: Newest to Oldest
+              </MenuItem>
+              <MenuItem value="Price: Low to High">Price: Low to High</MenuItem>
+              <MenuItem value="Price: High to Low">Price: High to Low</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+      )}
     </>
   )
 }
