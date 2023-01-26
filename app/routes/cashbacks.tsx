@@ -40,11 +40,11 @@ function Cashbacks() {
   }
 
   function filterCashbacks() {
-    if (filter === "Price: Low to High") {
+    if (filter === "Price: High to Low") {
       return cashbacks.sort((a: Cashback, b: Cashback) => {
         return b.price_in_cents - a.price_in_cents
       })
-    } else if (filter === "Price: High to Low") {
+    } else if (filter === "Price: Low to High") {
       return cashbacks.sort((a: Cashback, b: Cashback) => {
         return a.price_in_cents - b.price_in_cents
       })
